@@ -4,37 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Sinful Sake</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Sinful Sake V2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/post.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
-<header class="navbar">
-    <div class="logo">Sinful Sake</div>
-
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-
-    <nav id="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
-        <a href="bucket.html">Bucket of Bust</a>
-        <a href="categories.html">Categories</a>
-        <a href="archive.html">Archive</a>
-        <a href="about.html">About</a>
-    </nav>
-</header>
+<div id="navbar"></div>
 
 <!-- PAGE HEADER -->
-<section class="page-header">
-    <h1>🧾 The Blog</h1>
-    <p>Reviews, weekly chaos, and brutally honest takes.</p>
+<section class="hero blog-hero">
+
+    <div class="hero-content index">
+        <h1>The Sinful Sake Blog</h1>
+
+        <p class="subtitle" style="text-indent: 50px;">
+            Reviews, weekly chaos, and characters added to the everfulling bucket!
+        </p>
+
+        <div class="meta">
+            <span>Latest Drops</span>
+            <span>|</span>
+            <span>Reviews</span>
+            <span>|</span>
+            <span>Sake Sessions</span>
+        </div>
+
+    </div>
+
 </section>
 
 <!-- FILTERS -->
 <section class="filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="review">Reviews</button>
-    <button class="filter-btn" data-filter="weekly">Weekly Brew</button>
+    <div class="filter-group">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="review">Reviews</button>
+        <button class="filter-btn" data-filter="weekly">Weekly Brew</button>
+    </div>
 </section>
 
 <!-- POSTS -->
@@ -42,67 +52,29 @@
     <div class="grid" id="post-grid">
 
         <!-- REVIEW -->
-        <a href="post/reviews/amagi-brilliant-park.html" class="post-card" data-type="review">
-            <h3>Amagi Brilliant Park Review</h3>
-            <p class="tag">Review</p>
+        <a href="post/sora-yori-mo-tooi-basho.html" class="post-card" data-type="review">
+
+            <div class="post-image">
+                <img src="img\anime\a-place-further-than-the-universe\a-place-further-than-the-universe.jpeg" alt="">
+                <span class="label review">Review</span>
+            </div>
+
+            <div class="post-body">
+                <h3>A Place Further than the Universe</h3>
+                <p>A rewatch that hit way harder than expected.</p>
+
+                <div class="post-meta">
+                    <span>April 24, 2026</span>
+                </div>
+            </div>
         </a>
-
-        <!-- WEEKLY -->
-        <div class="post-card" data-type="weekly">
-            <h3>This Week’s Brew #1</h3>
-            <p class="tag">Weekly Brew</p>
-        </div>
-
-        <!-- DUPLICATE FOR TESTING -->
-        <div class="post-card" data-type="review">
-            <h3>Another Anime Review</h3>
-            <p class="tag">Review</p>
-        </div>
-
-        <div class="post-card" data-type="weekly">
-            <h3>This Week’s Brew #2</h3>
-            <p class="tag">Weekly Brew</p>
-        </div>
 
     </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-    <p>Sinful Sake</p>
-    <div class="socials">
-        <a href="#">MyAnimeList</a>
-        <a href="#">Instagram</a>
-        <a href="#">TikTok</a>
-    </div>
-    <p>© 2026 Sinful Sake</p>
-</footer>
+<div id="footer"></div>
 
-<!-- SCRIPT -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const buttons = document.querySelectorAll(".filter-btn");
-    const posts = document.querySelectorAll(".post-card");
-
-    buttons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            document.querySelector(".active").classList.remove("active");
-            btn.classList.add("active");
-
-            const filter = btn.getAttribute("data-filter");
-
-            posts.forEach(post => {
-                if (filter === "all" || post.dataset.type === filter) {
-                    post.style.display = "block";
-                } else {
-                    post.style.display = "none";
-                }
-            });
-        });
-    });
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
-<script src="script.js"></script>
