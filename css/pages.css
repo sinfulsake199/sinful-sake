@@ -70,14 +70,14 @@
 /* BLOG HERO BACKGROUND */
 .blog-hero {
     background: linear-gradient(to bottom, rgba(0,0,0,0.7), #0f0f0f),
-    url("/img/blog-hero.jpg") center/cover;
+    url("img/blog-hero.jpg") center/cover;
     color: white;
     min-height: 50vh;
 }
 
 .bucket-hero {
     background: linear-gradient(to bottom, rgba(0,0,0,0.7), #0f0f0f),
-    url("/img/bucket-hero.jpg") center/cover;
+    url("img/bucket-hero.jpg") center/cover;
     color: white;
     min-height: 50vh;
 }
