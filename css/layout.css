@@ -1,0 +1,78 @@
+/* SECTION SPACING */
+section {
+    padding: 60px 8%;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(15,15,15,0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.navbar nav a {
+    margin-left: 25px;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #fff;
+}
+
+/* GRID SYSTEMS */
+.split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+#post-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+}
+
+/* FOOTER */
+footer {
+    padding: 40px 8%;
+    text-align: center;
+    background: #111;
+    margin-top: auto;
+}
+
+.socials a {
+    margin: 0 10px;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.socials a:hover {
+    color: #fff;
+}
+
