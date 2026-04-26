@@ -8,12 +8,16 @@ function getBasePath() {
 }
 
 // Load an external HTML component into a target element
-async function loadComponent(id, file) {
+async function loadComponent(id, file, base = "") {
     const el = document.getElementById(id);
     if (!el) return;
 
     const res = await fetch(file);
-    const html = await res.text();
+    let html = await res.text();
+
+    // Inject base path into component
+    html = html.replaceAll("{{base}}", base);
+
     el.innerHTML = html;
 }
 
@@ -24,8 +28,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const base = getBasePath();
 
     // Load shared components
-    await loadComponent("navbar", base + "components/navbar.html");
-    await loadComponent("footer", base + "components/footer.html");
+    await loadComponent("navbar", base + "components/navbar.html", base);
+    await loadComponent("footer", base + "components/footer.html", base);
 
     // ------------------------------
     // Mobile Navigation Toggle
