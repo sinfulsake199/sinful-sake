@@ -1,63 +1,9 @@
-/* PAGE HEADER */
-.page-header {
-    text-align: center;
-}
-
-.page-header h1 {
-    font-size: 36px;
-}
-
-.page-header p {
-    color: #aaa;
-}
-
-/* TAGS */
-.tags {
-    margin-top: 20px;
-}
-
-.tags span, .tags a, .filter-btn {
-    all: unset;
-    display: inline-block;
-    padding: 10px 14px;
-    border-radius: 20px;
-    background: #1a1a1a;
-    color: #ddd;
-    margin: 6px;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.tags span:hover, .tags a:hover, .filter-btn:hover, .filter-btn.active {
-    background: #ff4d6d;
-    color: #fff;
-}
-
-/* ABOUT */
-.about p {
-    margin: 15px 0;
-    color: #bbb;
-}
-
-/* PAGE WRAPPER */
-.page {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
-    margin-top: 5%;
-}
-
-.page h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.page p {
-    color: #bbb;
-    margin-bottom: 15px;
-}
-
 /* HERO */
+
+/* =========================
+HERO SYSTEM (ALL PAGES)
+========================= */
+
 .hero {
     box-sizing: border-box;
     min-height: 75vh;
@@ -67,100 +13,261 @@
     background: linear-gradient(to bottom, rgba(0,0,0,0.7), #0f0f0f),
                 url("../img/anime/a-place-further-than-the-universe/a-place-further-than-the-universe.jpeg") center/cover;
 }
-/* BLOG HERO BACKGROUND */
+
+.hero-content h1 {
+font-size: 36px;
+margin: 0;
+}
+
+.hero-content .subtitle {
+color: #ccc;
+margin: 10px 0;
+}
+
+.meta {
+margin-top: 10px;
+color: #aaa;
+font-size: 0.9rem;
+}
+
+/* VARIANTS */
 .blog-hero {
     background: linear-gradient(to bottom, rgba(0,0,0,0.7), #0f0f0f),
-    url("img/blog-hero.jpg") center/cover;
+    url("/img/blog-hero.jpg") center/cover;
     color: white;
     min-height: 50vh;
 }
 
 .bucket-hero {
     background: linear-gradient(to bottom, rgba(0,0,0,0.7), #0f0f0f),
-    url("img/bucket-hero.jpg") center/cover;
+    url("/img/bucket-hero.jpg") center/cover;
     color: white;
     min-height: 50vh;
 }
 
-.hero h1 {
-    font-size: 3.2rem;
-    margin: 15px 0;
-}
+/* =====================
+   BUCKET / TIERS
+===================== */
 
-.subtitle {
-    color: #bbb;
-    margin-bottom: 20px;
-}
-
-.meta {
+.bucket-grid {
     display: flex;
-    gap: 15px;
+    gap: 20px;
+}
+
+.view-tier {
+    font-size: 12px;
     color: #aaa;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
 }
 
-.rating {
-    color: #ff4d6d;
+.platinum { border-top: 10px solid #e5e4e2; }
+.diamond  { border-top: 10px solid #b9f2ff; }
+.gold     { border-top: 10px solid #ffd700; }
+.silver   { border-top: 10px solid #c0c0c0; }
+.bronze   { border-top: 10px solid #cd7f32; }
+.copper   { border-top: 10px solid #eb9f59; }
+.stone    { border-top: 10px solid #555; }
+
+/* =========================
+HEADER HERO (IMAGE STYLE)
+========================= */
+
+.header-hero {
+position: relative;
+height: 300px;
+border-radius: 16px;
+overflow: hidden;
 }
 
-.badge {
-    display: inline-block;
-    background: rgba(255,77,109,0.15);
-    color: #ff4d6d;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 0.8rem;
+.header-hero img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+filter: brightness(0.5);
 }
 
-.btn-primary {
-    display: inline-block;
-    background: #ff4d6d;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 6px;
-    transition: 0.3s;
+.header-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(
+to top,
+rgba(0,0,0,0.85),
+rgba(0,0,0,0.4),
+transparent
+);
 }
 
-.btn-primary:hover {
-    opacity: 0.85;
+.header-content {
+position: absolute;
+bottom: 30px;
+left: 30px;
 }
 
-/* FEATURE BAR */
-.feature-bar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 15px;
-    padding: 0;
-    max-width: 1440px;
-    margin: 0 auto;
+.character-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 20px;
+    width: 100%;
 }
 
-.feature i {
-    font-size: 1.4rem;
-    color: #ff4d6d;
+/* =========================
+ARCHIVE PAGE
+========================= */
+
+.page {
+padding: 40px 8%;
+max-width: 1000px;
+margin: auto;
 }
 
-.feature span {
-    display: block;
-    font-size: 0.8rem;
-    color: #888;
+.archive-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+    min-width: 500px;
 }
 
-.feature:hover {
+.archive-header h1 {
+margin: 0;
+}
+
+.archive-controls {
+display: flex;
+gap: 10px;
+}
+
+/* SEARCH */
+
+#searchInput {
+padding: 0.6rem 0.9rem;
+border-radius: 8px;
+border: 1px solid #444;
+background: #111;
+color: #fff;
+width: 220px;
+}
+
+#searchInput:focus {
+border-color: #888;
+}
+
+/* LIST */
+
+.archive-list {
+list-style: none;
+padding: 0;
+}
+
+.archive-list li {
+display: flex;
+justify-content: space-between;
+margin-bottom: 10px;
+}
+
+/* =========================
+BLOG GRID PAGE
+========================= */
+
+.recent {
+padding-top: 0;
+}
+
+.filter-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* =========================
+BUCKET (TIER SYSTEM)
+========================= */
+.tier-card {
+background: #0f0f0f;
+margin-bottom: 30px;
+border-radius: 16px;
+overflow: hidden;
+border: 1px solid rgba(255,255,255,0.05);
+}
+
+.tier-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 20px;
+background: #1a1a1a;
+}
+
+.tier-header h2 {
+margin: 0;
+}
+
+.view-tier {
+font-size: 12px;
+color: #aaa;
+text-decoration: none;
+}
+
+.view-tier:hover {
+color: #ff2c2c;
+}
+
+/* GRID BEHAVIOR */
+.tier {
     background: #1a1a1a;
-    transform: translateY(-3px);
-    color: #fff;
+    padding: 20px;
+    border-radius: 14px;
+    text-align: center;
+    transition: 0.3s;
+    flex: 1;
 }
 
-/* SPLIT SECTION */
-.split-highlight {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
+.tier:hover {
+    transform: translateY(-5px);
 }
 
-.highlight-card {
+.tier-card .character-grid {
+padding: 20px;
+}
+
+/* =========================
+BUCKET LABEL
+========================= */
+
+.bucket-character {
+display: inline-block;
+padding: 10px 14px;
+border-radius: 8px;
+background: #111;
+font-weight: bold;
+width: 90%;
+padding: 1em 0;
+margin-top: 1em;
+text-align: center;
+}
+
+/* =========================
+SMALL UTILITIES
+========================= */
+
+.section-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 15px;
+}
+
+.section-title {
+margin: 30px 0 10px;
+border-left: 4px solid red;
+padding-left: 10px;
+}
+
+/* INDEX  */
+
+.featured {
     background: #1a1a1a;
     border-radius: 14px;
     overflow: hidden;
@@ -168,28 +275,65 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    padding: 0;
+    border: 1px solid rgba(255, 77, 109, 0.4);
 }
 
-.highlight-card img {
+.featured img {
     width: 100%;
     height: 220px;
     object-fit: cover;
     display: block;
 }
 
-.highlight-card .content {
-    padding: 15px;
-}
-
-.highlight-card h3 {
+.featured-tag {
+    display: inline-block;
+    background: #ff2c2c;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
     margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.category-tags {
+    display: flex;
+    margin-top: 20px;
 }
 
-.highlight-card.red {
-    border: 1px solid rgba(255,77,109,0.4);
+.category-tags a {
+    display: inline-block;
+    padding: 10px 16px;
+    margin: 6px;
+    border-radius: 20px;
+    background: #1a1a1a;
+    color: #ccc;
+    transition: 0.3s;
+    flex: 1;
+    text-align: center;
 }
 
-.highlight-card.purple {
-    border: 1px solid rgba(150,100,255,0.4);
+.category-tags a:hover {
+    background: #ff4d6d;
+    color: #fff;
+}
+.about {
+    margin-bottom: 5.75em;
+}
+.about p {
+    margin-top: 1.75em;
 }
 
+/* ABOUT PAGE */
+
+.about-layout {
+    margin-top: 6.75em;
+}
+
+.about-layout h1 {
+    padding-bottom: 1em;
+}
+
+.about-layout p {
+    color: #bbb;
+    margin-bottom: 15px;
+}
