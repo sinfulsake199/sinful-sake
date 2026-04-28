@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Sinful Sake</title>
-    <link rel="shortcut icon" href="img/Sinful Sake V2.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/post.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -22,7 +23,7 @@
     <div class="hero-content index">
         <h1>The Sinful Sake Blog</h1>
 
-        <p class="subtitle" style="text-indent: 50px;">
+        <p class="subtitle">
             Reviews, weekly chaos, and characters added to the everfulling bucket!
         </p>
 
@@ -37,40 +38,42 @@
     </div>
 
 </section>
-
-<!-- FILTERS -->
-<section class="filters">
-    <div class="filter-group">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="review">Reviews</button>
-        <button class="filter-btn" data-filter="weekly">Weekly Brew</button>
-    </div>
-</section>
-
-<!-- POSTS -->
-<section class="recent">
-    <div class="grid" id="post-grid">
-
-        <!-- REVIEW -->
-        <a href="post/sora-yori-mo-tooi-basho.html" class="post-card" data-type="review">
-
-            <div class="post-image">
-                <img src="img\anime\a-place-further-than-the-universe\a-place-further-than-the-universe.jpeg" alt="">
-                <span class="label review">Review</span>
-            </div>
-
-            <div class="post-body">
-                <h3>A Place Further than the Universe</h3>
-                <p>A rewatch that hit way harder than expected.</p>
-
-                <div class="post-meta">
-                    <span>April 24, 2026</span>
+<div class="character-section-margin">
+    
+    <!-- FILTERS -->
+    <section>
+        <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="review">Reviews</button>
+            <button class="filter-btn" data-filter="weekly">Weekly Brew</button>
+        </div>
+    </section>
+    
+    <!-- POSTS -->
+    <section class="recent">
+        <div class="post-grid">
+    
+            <!-- REVIEW -->
+            <a href="post/sora-yori-mo-tooi-basho.html" class="post-card" data-type="review">
+    
+                <div class="post-image">
+                    <img src="img/anime/a-place-further-than-the-universe/a-place-further-than-the-universe.jpeg" alt="">
+                    <span class="label review">Review</span>
                 </div>
-            </div>
-        </a>
-
-    </div>
-</section>
+    
+                <div class="post-body">
+                    <h3>A Place Further than the Universe</h3>
+                    <p>A rewatch that hit way harder than expected.</p>
+    
+                    <div class="post-meta">
+                        <span>April 24, 2026</span>
+                    </div>
+                </div>
+            </a>
+    
+        </div>
+    </section>
+</div>
 
 <!-- FOOTER -->
 <div id="footer"></div>

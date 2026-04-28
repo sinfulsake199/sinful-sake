@@ -192,7 +192,7 @@ if (lightbox) {
 
 // Keyboard navigation
 document.addEventListener('keydown', (e) => {
-    if (!lightbox) return; // 👈 guard first
+    if (!lightbox) return;  
 
     if (!lightbox.classList.contains('active')) return;
 
@@ -225,15 +225,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-const searchInput = document.getElementById("searchInput");
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("searchInput");
 
-searchInput.addEventListener("keyup", function () {
-    const filter = searchInput.value.toLowerCase();
-    const posts = document.querySelectorAll(".archive-list li");
-    
-    posts.forEach(post => {
-        const text = post.textContent.toLowerCase();
-        post.style.display = text.includes(filter) ? "" : "none";
+    if (!searchInput) return;
+
+    searchInput.addEventListener("keyup", function () {
+        const filter = searchInput.value.toLowerCase();
+        const posts = document.querySelectorAll(".archive-list li");
+
+        posts.forEach(post => {
+            const text = post.textContent.toLowerCase();
+            post.style.display = text.includes(filter) ? "" : "none";
+        });
     });
 });
-
